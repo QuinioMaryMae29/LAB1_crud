@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <center><h1>Product Listing</h1></center>
+    <center><h1>Product List</h1></center>
     <center>
         <table border="5" style="width:60%">
         <tr>
