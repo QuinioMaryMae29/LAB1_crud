@@ -33,6 +33,7 @@
         <input type="submit" value="Save">
     </form>
     <br>
+    <h5>Table Products</h5>
     <table border="5" style="width:50%">
         <tr>
             <th>ProductName</th>

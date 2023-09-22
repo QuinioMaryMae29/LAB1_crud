@@ -12,6 +12,19 @@ class ProductController extends BaseController
     {
         $this->product = new \App\Models\ProductModel();
     }
+
+    public function save()
+    {
+        $data = [
+            'name' => $this->request->getVar('name'),
+            'description' => $this->request->getVar('description'),
+            'category' => $this->request->getVar('category'),
+            'quantity' => $this->request->getVar('quantity'),
+            'price' => $this->request->getVar('price'),
+        ];
+        $this->product->save($data);
+        return redirect()->to('/product');
+    }
     
     public function product($product)
     {
