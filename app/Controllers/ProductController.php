@@ -23,7 +23,7 @@ class ProductController extends BaseController
     {
         $data = [
             'product' => $this->product->findAll(),
-            'pro' => $this->product->where('id', $id)->first(),
+            'pr' => $this->product->where('id', $id)->first(),
         ];
         return view('products', $data);
     }
