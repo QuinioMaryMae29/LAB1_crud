@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <center><h1>Product Management</h1></center>
+    <center><h1>Store Management</h1></center>
     <form action="/save" method="post">
         <label>Product Name: </label>
         <input type="text" name='name'>
@@ -17,10 +17,10 @@
         <label for="products">Choose a product category: </label>
         <select name="products" id="products">
             <option value=""></option>
-            <option value="food">Food</option>
-            <option value="school supplies">School Supplies</option>
-            <option value="personal care/health">Personal Care/Health</option>
-            <option value="grocery">Grocery</option>
+            <option value="">Food</option>
+            <option value="">School Supplies</option>
+            <option value="">Personal Care/Health</option>
+            <option value="">Grocery</option>
         </select>
         <br><br>
         <label>Product Quantity: </label>
