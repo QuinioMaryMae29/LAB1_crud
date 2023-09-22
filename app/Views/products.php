@@ -9,14 +9,14 @@
     <center><h1>Product Management</h1></center>
     <form action="/save" method="post">
         <label>Product Name: </label>
-        <input type= "hidden" name="id"> 
-        <input type="text" name='name'>
+        <input type= "hidden" name="id" value="<?= $pro['id']?>"> 
+        <input type="text" name='name' value="<?= $pro['name']?>">
         <br><br>
         <label>Product Description: </label>
-        <input type="text" name='description'>
+        <input type="text" name='description' value="<?= $pro['description']?>">
         <br><br>
         <label for="products">Choose a product category: </label>
-        <select name="products" id="products">
+        <select name="products" id="products" value="<?= $pro['products']?>">
             <option value=""></option>
             <option value="food">Food</option>
             <option value="schoolsupplies">School Supplies</option>
@@ -26,21 +26,21 @@
         </select>
         <br><br>
         <label>Product Quantity: </label>
-        <input type="number" name="quantity" id="">
+        <input type="number" name="quantity" id="" value="<?= $pro['quantity']?>">
         <br><br>
         <label>Product Price: </label>
-        <input type="number" name="price" id="">
+        <input type="number" name="price" id="" value="<?= $pro['price']?>">
         <br><br>
         <input type="submit" value="Save">
     </form>
     <br><br>
     <table border="3">
         <tr>
-            <th>ProductName</th>
-            <th>ProductDescription</th>
-            <th>ProductCategory</th>
-            <th>ProductQuantity</th>
-            <th>ProductPrice</th>
+            <th>ProdName</th>
+            <th>ProdDescription</th>
+            <th>ProdCategory</th>
+            <th>ProdQuantity</th>
+            <th>ProdPrice</th>
             <th>Action</th>
         </tr>
         <?php foreach($product as $pr): ?>

@@ -23,7 +23,7 @@ class ProductController extends BaseController
     {
         $data = [
             'product' => $this->product->findAll(),
-            'pr' => $this->product->where('id', $id)->first(),
+            'pro' => $this->product->where('id', $id)->first(),
         ];
         return view('products', $data);
     }
@@ -32,11 +32,11 @@ class ProductController extends BaseController
     {
         $id = $_POST['id'];
         $data = [
-            'Name' => $this->request->getVar('Name'),
-            'Description' => $this->request->getVar('Description'),
-            'Category' => $this->request->getVar('Category'),
-            'Quantity' => $this->request->getVar('Quantity'),
-            'Price' => $this->request->getVar('Price'),
+            'ProdName' => $this->request->getVar('ProdName'),
+            'ProdDescription' => $this->request->getVar('ProdDescription'),
+            'ProdCategory' => $this->request->getVar('ProdCategory'),
+            'ProdQuantity' => $this->request->getVar('ProdQuantity'),
+            'ProdPrice' => $this->request->getVar('ProdPrice'),
         ];
         if($id!= null){
             $this->product->set($data)->where('id', $id)->update();
