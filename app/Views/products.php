@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <center><h1>Store Management</h1></center>
+    <center><h1>Product Management</h1></center>
     <form action="/save" method="post">
         <label>Product Name: </label>
         <input type="text" name='name'>
