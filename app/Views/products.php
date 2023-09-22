@@ -6,8 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Product Listing</h1>
-    <table border="5" style="width:60%">
+    <center><h1>Product Management</h1></center>
+    <form action="/save" method="post">
+        <label>Product Name: </label>
+        <input type="text" name='name'>
+        <br><br>
+        <label>Product Description: </label>
+        <input type="text" name='description'>
+        <br><br>
+        <label for="products">Choose a product category: </label>
+        <select name="products" id="products">
+            <option value=""></option>
+            <option value="food">Food</option>
+            <option value="school supplies">School Supplies</option>
+            <option value="personal care/health">Personal Care/Health</option>
+            <option value="grocery">Grocery</option>
+        </select>
+        <br><br>
+        <label>Product Quantity: </label>
+        <input type="number" name="quantity" id="">
+        <br><br>
+        <label>Product Price: </label>
+        <input type="number" name="price" id="">
+        <br><br>
+        <input type="submit" value="Save">
+    </form>
+    <br>
+    <table border="5" style="width:50%">
         <tr>
             <th>ProductName</th>
             <th>ProductDescription</th>
