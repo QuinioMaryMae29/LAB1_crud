@@ -9,13 +9,14 @@
     <center><h1>Product Management</h1></center>
     <form action="/save" method="post">
         <label>Product Name: </label>
-        <input type="text" name='name'>
+        <input type= "hidden" name="id" value="<?= $pro['id']?>"> 
+        <input type="text" name='name' value="<?= $pro['ProductName']?>">
         <br><br>
         <label>Product Description: </label>
-        <input type="text" name='description'>
+        <input type="text" name='description' value="<?= $pro['ProductDescription']?>">
         <br><br>
         <label for="products">Choose a product category: </label>
-        <select name="products" id="products">
+        <select name="products" id="products" value="<?= $pro['ProductCategory']?>">
             <option value=""></option>
             <option value="food">Food</option>
             <option value="schoolsupplies">School Supplies</option>
@@ -25,22 +26,22 @@
         </select>
         <br><br>
         <label>Product Quantity: </label>
-        <input type="number" name="quantity" id="">
+        <input type="number" name="quantity" id="" value="<?= $pro['ProductQuantity']?>">
         <br><br>
         <label>Product Price: </label>
-        <input type="number" name="price" id="">
+        <input type="number" name="price" id="" value="<?= $pro['ProductPrice']?>">
         <br><br>
         <input type="submit" value="Save">
     </form>
-    <br>
-    <h5>Table Products</h5>
-    <table border="5" style="width:50%">
+    <br><br>
+    <table border="3">
         <tr>
             <th>ProductName</th>
             <th>ProductDescription</th>
             <th>ProductCategory</th>
             <th>ProductQuantity</th>
             <th>ProductPrice</th>
+            <th>Action</th>
         </tr>
         <?php foreach($product as $pr): ?>
             <tr>
@@ -49,6 +50,7 @@
                 <td><?= $pr['ProductCategory'] ?></td>
                 <td><?= $pr['ProductQuantity'] ?></td>
                 <td><?= $pr['ProductPrice'] ?></td>
+                <td><a href="/delete/<?= $pr['id'] ?>">Delete</a> || <a href="/edit/<?= $pr['id'] ?>">Edit</a></td>
             </tr>
         <?php endforeach; ?>
     </table>

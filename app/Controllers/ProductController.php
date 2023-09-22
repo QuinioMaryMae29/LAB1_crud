@@ -13,16 +13,36 @@ class ProductController extends BaseController
         $this->product = new \App\Models\ProductModel();
     }
 
-    public function save()
+    public function delete($id)
+    {
+        $this->product->delete($id);
+        return redirect()->to('/product');
+    }
+
+    public function edit($id)
     {
         $data = [
-            'name' => $this->request->getVar('name'),
-            'description' => $this->request->getVar('description'),
-            'category' => $this->request->getVar('category'),
-            'quantity' => $this->request->getVar('quantity'),
-            'price' => $this->request->getVar('price'),
+            'product' => $this->product->findAll(),
+            'pro' => $this->product->where('id', $id)->first(),
         ];
-        $this->product->save($data);
+        return view('products', $data);
+    }
+
+    public function save()
+    {
+        $id = $_POST['id'];
+        $data = [
+            'ProductName' => $this->request->getVar('ProductName'),
+            'ProductDescription' => $this->request->getVar('ProductDescription'),
+            'ProductCategory' => $this->request->getVar('ProductCategory'),
+            'ProductQuantity' => $this->request->getVar('ProductQuantity'),
+            'ProductPrice' => $this->request->getVar('ProductPrice'),
+        ];
+        if($id!= null){
+            $this->product->set($data)->where('id', $id)->update();
+        }else{
+            $this->product->save($data);
+        }
         return redirect()->to('/product');
     }
     
