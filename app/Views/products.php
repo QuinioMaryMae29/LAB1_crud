@@ -9,14 +9,14 @@
     <center><h1>Product Management</h1></center>
     <form action="/save" method="post">
         <label>Product Name: </label>
-        <input type= "hidden" name="id" value="<?= $pro['id']?>"> 
-        <input type="text" name='name' value="<?= $pro['ProductName']?>">
+        <input type= "hidden" name="id" > 
+        <input type="text" name='name' >
         <br><br>
         <label>Product Description: </label>
-        <input type="text" name='description' value="<?= $pro['ProductDescription']?>">
+        <input type="text" name='description' >
         <br><br>
         <label for="products">Choose a product category: </label>
-        <select name="products" id="products" value="<?= $pro['ProductCategory']?>">
+        <select name="products" id="products" >
             <option value=""></option>
             <option value="food">Food</option>
             <option value="schoolsupplies">School Supplies</option>
@@ -26,10 +26,10 @@
         </select>
         <br><br>
         <label>Product Quantity: </label>
-        <input type="number" name="quantity" id="" value="<?= $pro['ProductQuantity']?>">
+        <input type="number" name="quantity" id="" >
         <br><br>
         <label>Product Price: </label>
-        <input type="number" name="price" id="" value="<?= $pro['ProductPrice']?>">
+        <input type="number" name="price" id="" >
         <br><br>
         <input type="submit" value="Save">
     </form>

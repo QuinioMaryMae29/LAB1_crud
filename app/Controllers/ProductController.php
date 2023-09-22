@@ -32,11 +32,11 @@ class ProductController extends BaseController
     {
         $id = $_POST['id'];
         $data = [
-            'ProductName' => $this->request->getVar('ProductName'),
-            'ProductDescription' => $this->request->getVar('ProductDescription'),
-            'ProductCategory' => $this->request->getVar('ProductCategory'),
-            'ProductQuantity' => $this->request->getVar('ProductQuantity'),
-            'ProductPrice' => $this->request->getVar('ProductPrice'),
+            'Name' => $this->request->getVar('Name'),
+            'Description' => $this->request->getVar('Description'),
+            'Category' => $this->request->getVar('Category'),
+            'Quantity' => $this->request->getVar('Quantity'),
+            'Price' => $this->request->getVar('Price'),
         ];
         if($id!= null){
             $this->product->set($data)->where('id', $id)->update();
