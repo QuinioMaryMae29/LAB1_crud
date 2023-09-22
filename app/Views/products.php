@@ -6,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <center><h1>Product List</h1></center>
-    <center>
-        <table border="5" style="width:60%">
+    <h1>Product Listing</h1>
+    <table border="5" style="width:60%">
         <tr>
             <th>ProductName</th>
             <th>ProductDescription</th>
@@ -26,6 +25,5 @@
             </tr>
         <?php endforeach; ?>
     </table>
-    </center>
 </body>
 </html>
