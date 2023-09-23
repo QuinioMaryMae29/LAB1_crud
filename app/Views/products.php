@@ -36,11 +36,11 @@
     <br><br>
     <table border="3">
         <tr>
-            <th>ProdName</th>
-            <th>ProdDescription</th>
-            <th>ProdCategory</th>
-            <th>ProdQuantity</th>
-            <th>ProdPrice</th>
+            <th>ProductName</th>
+            <th>ProductDescription</th>
+            <th>ProductCategory</th>
+            <th>ProductQuantity</th>
+            <th>ProductPrice</th>
             <th>Action</th>
         </tr>
         <?php foreach($product as $pr): ?>

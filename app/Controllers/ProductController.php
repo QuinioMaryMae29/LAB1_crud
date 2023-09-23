@@ -30,19 +30,14 @@ class ProductController extends BaseController
 
     public function save()
     {
-        $id = $_POST['id'];
         $data = [
-            'ProdName' => $this->request->getVar('ProdName'),
-            'ProdDescription' => $this->request->getVar('ProdDescription'),
-            'ProdCategory' => $this->request->getVar('ProdCategory'),
-            'ProdQuantity' => $this->request->getVar('ProdQuantity'),
-            'ProdPrice' => $this->request->getVar('ProdPrice'),
+            'ProductName' => $this->request->getVar('ProdName'),
+            'ProductDescription' => $this->request->getVar('ProdDescription'),
+            'ProductCategory' => $this->request->getVar('ProdCategory'),
+            'ProductQuantity' => $this->request->getVar('ProdQuantity'),
+            'ProductPrice' => $this->request->getVar('ProdPrice'),
         ];
-        if($id!= null){
-            $this->product->set($data)->where('id', $id)->update();
-        }else{
-            $this->product->save($data);
-        }
+        $this->product->save($data);
         return redirect()->to('/product');
     }
     
