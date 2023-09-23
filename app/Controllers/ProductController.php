@@ -31,11 +31,11 @@ class ProductController extends BaseController
     public function save()
     {
         $data = [
-            'ProductName' => $this->request->getVar('ProdName'),
-            'ProductDescription' => $this->request->getVar('ProdDescription'),
-            'ProductCategory' => $this->request->getVar('ProdCategory'),
-            'ProductQuantity' => $this->request->getVar('ProdQuantity'),
-            'ProductPrice' => $this->request->getVar('ProdPrice'),
+            'ProductName' => $this->request->getVar('ProductName'),
+            'ProductDescription' => $this->request->getVar('ProductDescription'),
+            'ProductCategory' => $this->request->getVar('ProductCategory'),
+            'ProductQuantity' => $this->request->getVar('ProductQuantity'),
+            'ProductPrice' => $this->request->getVar('ProductPrice'),
         ];
         $this->product->save($data);
         return redirect()->to('/product');
