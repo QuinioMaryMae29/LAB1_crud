@@ -10,10 +10,12 @@
     <form action="/save" method="post">
         <label>Product Name: </label>
         <input type="text" name='name' placeholder="name">
-        <br><br>
+        <br>
+        <br>
         <label>Product Description: </label>
         <input type="text" name='description' placeholder="description">
-        <br><br>
+        <br>
+        <br>
         <label for="products">Choose a product category: </label>
         <select name="products" id="products">
             <option value=""></option>
@@ -25,13 +27,16 @@
             <option value="shoes">SHOES</option>
             <option value="apparel">APPAREL</option>
         </select>
-        <br><br>
+        <br>
+        <br>
         <label>Product Quantity: </label>
         <input type="number" name="quantity" id="" placeholder="quantity">
-        <br><br>
+        <br>
+        <br>
         <label>Product Price: </label>
         <input type="number" name="price" id="" placeholder="price">
-        <br><br>
+        <br>
+        <br>
         <input type="submit" value="Save">
     </form>
     <br><br>
