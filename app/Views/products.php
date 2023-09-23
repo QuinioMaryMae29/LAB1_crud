@@ -7,7 +7,7 @@
 </head>
 <body>
     <center><h1>Product Management</h1></center>
-    <form action="" method="">
+    <form action="/save" method="post">
         <label>Product Name: </label>
         <input type="text" name='name' placeholder="name">
         <br><br>
@@ -17,13 +17,13 @@
         <label for="products">Choose a product category: </label>
         <select name="products" id="products">
             <option value=""></option>
-            <option value="food/drinks">Food/Drinks</option>
-            <option value="schoolsupplies">School Supplies</option>
-            <option value="personalcare/health">Personal Care/Health</option>
-            <option value="grocery">Grocery</option>
-            <option value="appliances">Appliances</option>
-            <option value="shoes">Shoes</option>
-            <option value="apparel">Apparel Clothes</option>
+            <option value="food/drinks">FOOD/DRINKS</option>
+            <option value="schoolsupplies">SCHOOL SUPPLIES</option>
+            <option value="personalcare/health">PERSONAL CARE/HEALTH</option>
+            <option value="grocery">GROCERY</option>
+            <option value="appliances">APPLIANCES</option>
+            <option value="shoes">SHOES</option>
+            <option value="apparel">APPAREL</option>
         </select>
         <br><br>
         <label>Product Quantity: </label>
@@ -31,6 +31,8 @@
         <br><br>
         <label>Product Price: </label>
         <input type="number" name="price" id="" placeholder="price">
+        <br><br>
+        <input type="submit" value="Save">
     </form>
     <br><br>
     <table border="5">

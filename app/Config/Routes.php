@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/product', 'ProductController::test');
 $routes->get('/product/(:any)', 'ProductController::product/$1');
+$routes->post('/save', 'ProductController::save');
