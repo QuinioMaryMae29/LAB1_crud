@@ -17,11 +17,13 @@
         <label for="products">Choose a product category: </label>
         <select name="products" id="products">
             <option value=""></option>
-            <option value="food">Food</option>
+            <option value="food/drinks">Food/Drinks</option>
             <option value="schoolsupplies">School Supplies</option>
             <option value="personalcare/health">Personal Care/Health</option>
             <option value="grocery">Grocery</option>
             <option value="appliances">Appliances</option>
+            <option value="shoes">Shoes</option>
+            <option value="apparel">Apparel Clothes</option>
         </select>
         <br><br>
         <label>Product Quantity: </label>
