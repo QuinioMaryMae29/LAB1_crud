@@ -15,11 +15,8 @@ class ProductController extends BaseController
 
     public function save()
     {
-        $productName = $this->request->getVar('ProductName');
-
-        if (!empty($productName)) {
         $data = [
-            'ProductName' => $productName,
+            'ProductName' => $this->request->getVar('ProductName'),
             'ProductDescription' => $this->request->getVar('ProductDescription'),
             'ProductCategory' => $this->request->getVar('ProductCategory'),
             'ProductQuantity' => $this->request->getVar('ProductQuantity'),
@@ -28,7 +25,6 @@ class ProductController extends BaseController
 
         $this->product->save($data);
         return redirect()->to('/product');
-        }
     }
     
     public function product($product)
