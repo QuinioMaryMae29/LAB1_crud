@@ -30,7 +30,7 @@ class ProductController extends BaseController
 
     public function save()
     {
-        $data = [
+        $data['product'] = [
             'ProductName' => $this->request->getVar('ProductName'),
             'ProductDescription' => $this->request->getVar('ProductDescription'),
             'ProductCategory' => $this->request->getVar('ProductCategory'),
