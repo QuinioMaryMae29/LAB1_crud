@@ -33,14 +33,13 @@
         <input type="submit" value="Save">
     </form>
     <br><br>
-    <table border="3">
+    <table border="5">
         <tr>
             <th>ProductName</th>
             <th>ProductDescription</th>
             <th>ProductCategory</th>
             <th>ProductQuantity</th>
             <th>ProductPrice</th>
-            <th>Action</th>
         </tr>
         <?php foreach($product as $pr): ?>
             <tr>
@@ -49,7 +48,6 @@
                 <td><?= $pr['ProductCategory'] ?></td>
                 <td><?= $pr['ProductQuantity'] ?></td>
                 <td><?= $pr['ProductPrice'] ?></td>
-                <td><a href="/delete/<?= $pr['id'] ?>">Delete</a> || <a href="/edit/<?= $pr['id'] ?>">Edit</a></td>
             </tr>
         <?php endforeach; ?>
     </table>
