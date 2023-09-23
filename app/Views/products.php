@@ -29,8 +29,6 @@
         <br><br>
         <label>Product Price: </label>
         <input type="number" name="price" id="" placeholder="price">
-        <br><br>
-        <input type="submit" value="Save">
     </form>
     <br><br>
     <table border="5">
