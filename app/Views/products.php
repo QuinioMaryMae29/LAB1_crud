@@ -8,16 +8,16 @@
 <body>
     <center><h1>Product Management</h1></center>
     <form action="/save" method="post">
-        <label>Product Name: </label>
-        <input type="text" name='name' placeholder="name" value="<?= $pro['name']?>">
+        <label for="product_name">Product Name: </label>
+        <input type="text" name='product_name' placeholder="name">
         <br>
         <br>
-        <label>Product Description: </label>
-        <input type="text" name='description' placeholder="description" value="<?= $pro['description']?>">
+        <label for="product_description">Product Description: </label>
+        <input type="text" name='product_description' placeholder="description">
         <br>
         <br>
-        <label for="products">Choose a product category: </label>
-        <select name="products" id="products">
+        <label for="product_category">Choose a product category: </label>
+        <select name="product_category" id="products">
             <option value=""></option>
             <option value="food/drinks">FOOD/DRINKS</option>
             <option value="schoolsupplies">SCHOOL SUPPLIES</option>
@@ -29,12 +29,12 @@
         </select>
         <br>
         <br>
-        <label>Product Quantity: </label>
-        <input type="number" name="quantity" id="" placeholder="quantity" value="<?= $pro['quantity']?>">
+        <label for="product_quantity">Product Quantity: </label>
+        <input type="number" name="product_quantity" id="" placeholder="quantity">
         <br>
         <br>
-        <label>Product Price: </label>
-        <input type="number" name="price" id="" placeholder="price" value="<?= $pro['price']?>">
+        <label for="product_price">Product Price: </label>
+        <input type="number" name="product_price" id="" placeholder="price">
         <br>
         <br>
         <input type="submit" value="Save">
@@ -59,6 +59,7 @@
                 <td><a href="/delete/<?= $pr['id'] ?>">Delete</a> || <a href="/edit/<?= $pr['id'] ?>">Edit</a></td>
             </tr>
         <?php endforeach; ?>
+        <a href="/productlist">Go to Product Listing</a>
     </table>
 </body>
 </html>

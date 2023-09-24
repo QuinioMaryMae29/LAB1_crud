@@ -30,7 +30,6 @@ class ProductController extends BaseController
 
     public function save()
     {
-        $id = $_POST['id'];
         $data = [
             'ProductName' => $this->request->getVar('ProductName'),
             'ProductDescription' => $this->request->getVar('ProductDescription'),
@@ -38,12 +37,13 @@ class ProductController extends BaseController
             'ProductQuantity' => $this->request->getVar('ProductQuantity'),
             'ProductPrice' => $this->request->getVar('ProductPrice'),
         ];
-        if($id!= null){
-            $this->product->set($data)->where('id', $id)->update();
-        }else{
-            $this->product->save($data);
-        }
+        $this->product->save($data);
         return redirect()->to('/product');
+    }
+
+    public function productlist()
+    {
+        return view('productlist');
     }
     
     public function product($product)
@@ -59,6 +59,6 @@ class ProductController extends BaseController
 
     public function index()
     {
-        //
+
     }
 }
