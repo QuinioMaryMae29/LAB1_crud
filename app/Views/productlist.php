@@ -9,22 +9,11 @@
 <h1>Product Listing</h1>
     <ul>
         <li>
-            <strong>Product Name: </strong> MILCU DEODORANT <br>
-            <strong>Product Description: </strong> BIG <br>
-            <strong>Product Category: </strong> PERSONAL CARE/HEALTH <br>
-            <strong>Product Quantity: </strong> 2 <br>
-            <strong>Product Price: </strong> $60.00 <br>
-            <strong>Action: </strong>
-            <a href="/delete">Delete</a> || <a href="/edit">Edit</a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <strong>Product Name: </strong> FRENCH FRIES <br>
-            <strong>Product Description: </strong> MEDIUM SIZE <br>
-            <strong>Product Category: </strong> FOOD/DRINKS <br>
-            <strong>Product Quantity: </strong> 2 <br>
-            <strong>Product Price: </strong> $40.00 <br>
+            <strong>Product Name: </strong>  <br>
+            <strong>Product Description: </strong> <br>
+            <strong>Product Category: </strong> <br>
+            <strong>Product Quantity: </strong> <br>
+            <strong>Product Price: </strong> <br>
             <strong>Action: </strong>
             <a href="/delete">Delete</a> || <a href="/edit">Edit</a>
         </li>
