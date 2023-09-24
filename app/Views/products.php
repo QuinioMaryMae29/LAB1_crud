@@ -59,7 +59,7 @@
                 <td><a href="/delete/<?= $pr['id'] ?>">Delete</a> || <a href="/edit/<?= $pr['id'] ?>">Edit</a></td>
             </tr>
         <?php endforeach; ?>
-        <a href="/productlist">Go to Product Listing</a>
+        <a href="/productlist">Product Listing</a>
     </table>
 </body>
 </html>
