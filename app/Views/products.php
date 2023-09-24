@@ -9,11 +9,11 @@
     <center><h1>Product Management</h1></center>
     <form action="/save" method="post">
         <label>Product Name: </label>
-        <input type="text" name='name' placeholder="name">
+        <input type="text" name='name' placeholder="name" value="<?= $pro['name']?>">
         <br>
         <br>
         <label>Product Description: </label>
-        <input type="text" name='description' placeholder="description">
+        <input type="text" name='description' placeholder="description" value="<?= $pro['description']?>">
         <br>
         <br>
         <label for="products">Choose a product category: </label>
@@ -30,11 +30,11 @@
         <br>
         <br>
         <label>Product Quantity: </label>
-        <input type="number" name="quantity" id="" placeholder="quantity">
+        <input type="number" name="quantity" id="" placeholder="quantity" value="<?= $pro['quantity']?>">
         <br>
         <br>
         <label>Product Price: </label>
-        <input type="number" name="price" id="" placeholder="price">
+        <input type="number" name="price" id="" placeholder="price" value="<?= $pro['price']?>">
         <br>
         <br>
         <input type="submit" value="Save">
@@ -47,6 +47,7 @@
             <th>ProductCategory</th>
             <th>ProductQuantity</th>
             <th>ProductPrice</th>
+            <th>Action</th>
         </tr>
         <?php foreach($product as $pr): ?>
             <tr>
@@ -55,6 +56,7 @@
                 <td><?= $pr['ProductCategory'] ?></td>
                 <td><?= $pr['ProductQuantity'] ?></td>
                 <td><?= $pr['ProductPrice'] ?></td>
+                <td><a href="/delete/<?= $pr['id'] ?>">Delete</a> || <a href="/edit/<?= $pr['id'] ?>">Edit</a></td>
             </tr>
         <?php endforeach; ?>
     </table>

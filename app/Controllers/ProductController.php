@@ -13,8 +13,24 @@ class ProductController extends BaseController
         $this->product = new \App\Models\ProductModel();
     }
 
+    public function delete($id)
+    {
+        $this->product->delete($id);
+        return redirect()->to('/product');
+    }
+
+    public function edit($id)
+    {
+        $data = [
+            'product' => $this->product->findAll(),
+            'pro' => $this->product->where('id', $id)->first(),
+        ];
+        return view('products', $data);
+    }
+
     public function save()
     {
+        $id = $_POST['id'];
         $data = [
             'ProductName' => $this->request->getVar('ProductName'),
             'ProductDescription' => $this->request->getVar('ProductDescription'),
@@ -22,8 +38,11 @@ class ProductController extends BaseController
             'ProductQuantity' => $this->request->getVar('ProductQuantity'),
             'ProductPrice' => $this->request->getVar('ProductPrice'),
         ];
-
-        $this->product->save($data);
+        if($id!= null){
+            $this->product->set($data)->where('id', $id)->update();
+        }else{
+            $this->product->save($data);
+        }
         return redirect()->to('/product');
     }
     
