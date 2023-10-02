@@ -21,23 +21,24 @@ class ProductController extends BaseController
 
     public function edit($id)
     {
-        $data = [
-            'product' => $this->product->findAll(),
-            'pro' => $this->product->where('id', $id)->first(),
-        ];
-        return view('products', $data);
+        $data['product'] = $this->product->find($id);
+        return view('/products', $data);
+    }
+
+    public function update($id)
+    {
+        $this->product->update($id, $_POST);
+        return redirect()->to('/products');
+    }
+
+    public function create()
+    {
+        return view('create');
     }
 
     public function save()
     {
-        $data = [
-            'ProductName' => $this->request->getVar('ProductName'),
-            'ProductDescription' => $this->request->getVar('ProductDescription'),
-            'ProductCategory' => $this->request->getVar('ProductCategory'),
-            'ProductQuantity' => $this->request->getVar('ProductQuantity'),
-            'ProductPrice' => $this->request->getVar('ProductPrice'),
-        ];
-        $this->product->save($data);
+        $this->product->save($_POST);
         return redirect()->to('/product');
     }
 
@@ -45,20 +46,20 @@ class ProductController extends BaseController
     {
         return view('productlist');
     }
-    
+
     public function product($product)
     {
         echo $product;
     }
 
-    public function test()
-    {
-        $data['product'] = $this->product->findAll();
-        return view('products', $data);
-    }
-
     public function index()
     {
 
+    }
+
+    public function test()
+    {
+        $data['product'] = $this->product->findAll();
+        return view('products' , $data);
     }
 }
