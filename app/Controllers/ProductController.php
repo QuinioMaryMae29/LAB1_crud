@@ -42,11 +42,6 @@ class ProductController extends BaseController
         return redirect()->to('/product');
     }
 
-    public function productlist()
-    {
-        return view('productlist');
-    }
-
     public function product($product)
     {
         echo $product;

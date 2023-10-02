@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Product List</h2>
+    <h1>Product Listing</h1>
     <a href="/create" class="btn btn-primary"> Add New Product </a>
     <table class="table" border="5">
         <thead>
@@ -35,5 +35,29 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <br>
+    <h3>Product Listing</h3>
+    <ul>
+        <li>
+            <strong>Product Name:  </strong> Milcu deodorant <br>
+            <strong>Product Description:  </strong> big <br>
+            <strong>Product Category:  </strong> Personal Care/Health <br>
+            <strong>Product Quantity: </strong> 2 <br>
+            <strong>Product Price: </strong> $60 <br>
+            <strong>Action: </strong>
+            <a href="/delete">Delete</a> || <a href="/edit">Edit</a>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <strong>Product Name:  </strong> french fries <br>
+            <strong>Product Description:  </strong> medium-sized <br>
+            <strong>Product Category:  </strong> Food/Drinks <br>
+            <strong>Product Quantity: </strong> 1 <br>
+            <strong>Product Price: </strong> $55 <br>
+            <strong>Action: </strong>
+            <a href="/delete">Delete</a> || <a href="/edit">Edit</a>
+        </li>
+    </ul>
 </body>
 </html>
