@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
             <label for="productquantity">Product Quantity: </label>
-            <input type="text" name="productquantity" id="productquantity" class="form-control">
+            <input type= "number" name="productquantity" id="productquantity" class="form-control">
         </div>
         <div class="form-group">
             <label for="productprice">Product Price: </label>
