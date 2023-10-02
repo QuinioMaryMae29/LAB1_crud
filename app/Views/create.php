@@ -8,18 +8,17 @@
 <body>
     <h2>Add New Product</h2>
     <form action="/save" method="post">
-            <input type="hidden" name="id" value="<?= $product['id'] ?>">
         <div class="form-group">
             <label for="productname">Product Name: </label>
-            <input type="text" name="productname" id="productname" class="form-control" value="<?= $product['productname'] ?>">
+            <input type="text" name="productname" id="productname" class="form-control">
         </div>
         <div class="form-group">
             <label for="productdescription">Product Description: </label>
-            <input type="text" name="productdescription" id="productdescription" class="form-control" value="<?= $product['productdescription'] ?>">
+            <input type="text" name="productdescription" id="productdescription" class="form-control">
         </div>
         <div class="form-group">
             <label for="productcategory">Select a product category: </label>
-            <select name="productcategory" id="productcategory" value="<?= $product['productcategory'] ?>">
+            <select name="productcategory" id="productcategory">
                 <option value=""></option>
                 <option value="PersonalCare/Health">Personal Care/Health</option>
                 <option value="Food/Drinks">Food/Drinks</option>
@@ -32,11 +31,11 @@
         </div>
         <div class="form-group">
             <label for="productquantity">Product Quantity: </label>
-            <input type="text" name="productquantity" id="productquantity" class="form-control" value="<?= $product['productquantity'] ?>">
+            <input type="text" name="productquantity" id="productquantity" class="form-control">
         </div>
         <div class="form-group">
             <label for="productprice">Product Price: </label>
-            <input type="text" name="productprice" id="productprice" class="form-control" value="<?= $product['productprice'] ?>">
+            <input type="text" name="productprice" id="productprice" class="form-control">
         </div>
         <br>
         <button type="save" class="btn btn-primary">Save</button>
